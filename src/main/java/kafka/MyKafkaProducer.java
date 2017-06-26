@@ -1,6 +1,7 @@
 package kafka;
 
 
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,7 +29,7 @@ public class MyKafkaProducer {
 		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 		props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
-		Producer<String, String> producer = new org.apache.kafka.clients.producer.KafkaProducer<>(props);
+		Producer<String, String> producer = new KafkaProducer<>(props);
 
 
 		String topic = "topic";

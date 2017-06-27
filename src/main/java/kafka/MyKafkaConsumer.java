@@ -20,6 +20,7 @@ public class MyKafkaConsumer {
 
 	public static void main(String[] args) throws Exception {
 
+		//只能连localhost
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "192.168.1.251:9092");
 		props.put("group.id", "test");

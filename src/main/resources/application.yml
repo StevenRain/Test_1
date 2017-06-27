@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  kafka:
+    bootstrap-servers: 192.168.1.251:9092
+    consumer:
+      group-id: myGroup
+    template:
+      default-topic: my-topic
+    listener:
+      concurrency: 3
+    producer:
+      batch-size: 1000
+
+server:
+    port: 8282
+    contextPath: /kafka

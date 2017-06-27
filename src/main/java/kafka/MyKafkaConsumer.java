@@ -22,7 +22,6 @@ public class MyKafkaConsumer {
 
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "192.168.1.251:9092");
-//		props.put("bootstrap.servers", "localhost:9092");
 		props.put("group.id", "test");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");
